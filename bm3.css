@@ -1,0 +1,338 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #781C68;
+  background-size: cover;
+  padding: 100px;
+}
+/**/
+nav{
+    display: flex;
+    position: fixed;
+    height: 80px;
+    z-index: 3;
+    margin-top: -100px;
+    padding: 0 50px 0 100px;
+    margin-left: -90px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+  nav .logo{
+    color: rgb(175, 10, 10);
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  
+  .sear{
+    border: 1px solid rgb(228, 225, 225);
+    border-right: none;
+    background-color: transparent;
+    border-bottom-left-radius: 10px;
+    border-end-start-radius: 10px;
+}
+.icon{
+   
+    background-color: transparent;
+    border: 1px solid rgb(228, 225, 225);
+    border-left:none ;
+    border-start-end-radius: 10px;
+}
+
+  nav ul{
+    display: flex;
+    text-decoration: none;
+    flex-wrap: wrap;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: rgb(243, 9, 9);
+    background: rgb(57, 165, 207);
+  }
+  nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: rgb(218, 13, 13);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: cyan;
+    }
+  }
+
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    border-top-right-radius: 15px;
+    background: #f1f1f1;
+    border-left: none;
+    margin-top: 8px;
+  }
+  
+  form.example button {
+    border-bottom-left-radius: 15px;
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background: lightslategray;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-right: none;
+    border-radius:none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #fff;
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  button {
+    background-color: transparent;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  .snbtn{
+    background-color: green;
+  }
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: red;
+  }
+  
+  .cancelbtn, .snbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  @media screen and (max-width: 200px) {
+    .cancelbtn, .signinbtn {
+       width: 80%;
+    }
+  }
+
+
+
+      #more {display: none;}
+      .rm{ 
+      width: 10%;  
+      max-height: 100px;
+      border:none;
+      font-size: small;
+      color: gray;
+      background-color: transparent;
+      }
+
+      .rmh{
+        color: #fff;
+      }
+/**/
+.icons{
+    border: 1px solid wheat;
+    border: none;
+    width: 100%;
+    margin: auto;
+}
+.i1{
+    border-radius: 17px;
+    justify-content: space-evenly;
+    opacity: 0.9;
+    
+ }
+ .i1:hover{
+    opacity: 1;
+    border: 2px solid white;
+ }
+
+ .i11{
+    border-radius: 17px;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    background-color: gray;
+    opacity: 0.9;
+ }
+ .i11:hover{
+    opacity: 1;
+    border: 2px solid white;
+ }
+
+ /*-------------------------------*/
+ 
+ .col{
+  border: 1px solid wheat;
+  margin:auto;
+  width: 100%;
+  padding: 30px;
+  border: none;
+}
+
+.irow{
+  margin: auto;
+  border-radius: 17px;
+  justify-content: space-evenly;
+  opacity: 0.9;
+  border: 1px solid wheat;
+  border: none;
+  margin-left: 10px;
+  padding: auto;
+  
+}
+.irow:hover{
+  opacity: 1;
+  border: 5px solid white;
+}
